@@ -11,7 +11,7 @@ RUN pip install numpy scipy pandas matplotlib sklearn
 RUN pip install psycopg2 sqlalchemy
 
 # Create empty /data directory so users can mount external volumes.
-RUN mkdir /data
+VOLUME [ '/data' ]
 
 # Set workdir to '/' and start bash (by default)
 WORKDIR /data

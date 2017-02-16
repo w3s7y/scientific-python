@@ -13,6 +13,6 @@ RUN pip install psycopg2 sqlalchemy
 # Create empty /data directory so users can mount external volumes.
 VOLUME /data
 
-# Set workdir to '/' and start bash (by default)
+# Set workdir to '/data' and start bash (by default)
 WORKDIR /data
 CMD bash

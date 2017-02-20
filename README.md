@@ -27,7 +27,8 @@ The one I use the most / exclusively, there is a empty '/data' volume so that yo
 mount your code directory into the container from your host.  E.G:
 
 ```shell
-docker run -it -v /Users/ben/Programming:/data benwest/scientific-python
+docker run -it -v /Users/ben/Programming:/data benwest/scientific-python:<release version>
 ```
+
 The container is set to run bash as the default command, so that you are then
-free to start python however you wish. 
+free to start python however you wish.

@@ -3,10 +3,11 @@
 # Use the alpine linux base image
 FROM alpine
 
-# Install vi, remove the apt lists
+# Install python3 & pip
 RUN apk update && \
-  apk add python3 py-pip
-
+  apk gcc add python3 py-pip && \
+  pip3 install --upgrade pip setuptools
+  
 # Install the Science & Learning libraries (latest)
 # There are: numpy, scipy, pandas, matplotlib, sklearn
 RUN pip3 install numpy scipy pandas matplotlib sklearn

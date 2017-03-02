@@ -1,7 +1,11 @@
 # scientific-python
 This is a base python 3 image with additional libraries loaded to enable a user
-to do machine learning and data analytics.  The image also has some SQL libraries
-loaded to enable users to talk to Postgres databases (or green plum as it's based on postgres).
+to do machine learning and data analytics.  The image also has some SQL
+libraries loaded to enable users to talk to Postgres databases
+(or green plum as it's based on postgres).
+
+There are some samples in /samples and it is usual to start this container in
+'interactive' mode.
 
 ## Python & Module Versions
 
@@ -20,6 +24,11 @@ loaded to enable users to talk to Postgres databases (or green plum as it's base
 
 * Work out how to enable display forwarding to allow matplotlib graphs to be forwarded back to the host.
 * Add some sample code to the image.
+* Add an additional container with a Pivotal Green Plum database
+
+## Sample
+I have included a very basic random generator and a python script which can be
+used to show a very small set of functionality.
 
 ## Examples
 ### Interactive Session

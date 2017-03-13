@@ -7,7 +7,8 @@ FROM alpine
 RUN apk update && \
   apk gcc add python3 py-pip && \
   pip3 install --upgrade pip setuptools
-  
+  pip install pytest
+
 # Install the Science & Learning libraries (latest)
 # There are: numpy, scipy, pandas, matplotlib, sklearn
 RUN pip3 install numpy scipy pandas matplotlib sklearn

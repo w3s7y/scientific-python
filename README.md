@@ -24,11 +24,6 @@ There are some samples in /samples and it is usual to start this container in
 
 * Work out how to enable display forwarding to allow matplotlib graphs to be forwarded back to the host.
 * Add some sample code to the image.
-* Add an additional container with a Pivotal Green Plum database
-
-## Sample
-I have included a very basic random generator and a python script which can be
-used to show a very small set of functionality.
 
 ## Examples
 ### Interactive Session
@@ -36,8 +31,17 @@ The one I use the most / exclusively, there is a empty '/data' volume so that yo
 mount your code directory into the container from your host.  E.G:
 
 ```shell
-docker run -it -v /Users/ben/Programming:/data benwest/scientific-python:<release version>
+docker run -d -v /Users/ben/Programming:/data benwest/scientific-python
 ```
 
-The container is set to run bash as the default command, so that you are then
-free to start python however you wish.
+The container is set to run ```tail -f /dev/null``` as the default command, so that you are then
+free to start the container with the -d option and connect / diconnect from it at will with:
+
+```shell
+docker exec -it <container ID> bash
+```
+or
+```shell
+docker exec -it <container ID> python
+```
+etc...
